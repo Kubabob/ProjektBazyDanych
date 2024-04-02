@@ -23,12 +23,8 @@ Dostępny jest kalendarz z najbliższymi akcjami jak i z tymi, ktore już były,
 
 W drużynie są określone funkcje dodatkowe jak proporcowa, kronikarka etc. - są określone czasowo i czasami wiążą się ze zdobywanym stopniem. 
 
-Dla zastępów prowadzona jest punktacja, która zawiera określone ilości punktów za określone akcje wraz z nazwami zastępów i ilością posiadanych przez nie punktów.
+#Dla zastępów prowadzona jest punktacja, która zawiera określone ilości punktów za określone akcje wraz z nazwami zastępów i ilością posiadanych przez nie punktów. #Do potwierdzenia w przyszłości
 
 Dla każdego z zastępów jest osobny kalendarz, w którym są zapisane plany zbiorek wraz z listą obecności i podsumowaniem przeprowadzonych akcji. 
-
-Dla każdej osoby funkcyjnej stworzone jest konto użytkownika, z określonymi uprawnieniami związanymi z obejmowaną funkcją. 
-
-Do funkcjonowania drużyny są potrzebne określone dokumenty, które niektóre związane są z konkretnymi harcerkami, ale mogą to być też np. faktury z opisem osób, które danych zakupów dokonały.
 
 Baza ma możliwość tworzenia wydarzeń wraz z zaplanowanymi preliminarzem, miejscem i planowaną listą obecności.
