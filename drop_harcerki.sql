@@ -16,10 +16,13 @@ drop TABLE if EXISTS zastep_harcerki;
 drop TABLE if EXISTS rodzice;
 drop TABLE if EXISTS rodzice_harcerki;
 
-drop TABLE if EXISTS umundurowanie;
+--drop TABLE if EXISTS umundurowanie;
 drop TABLE if EXISTS harcerka;
 drop TABLE if EXISTS opiekunka;
 
 drop TABLE if EXISTS szkola;
 drop TABLE if EXISTS zastepy_szkoly;
+
+drop TABLE if EXISTS chusta;
+DROP TABLE if EXISTS chusta_harcerki;
 

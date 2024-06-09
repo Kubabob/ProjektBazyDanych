@@ -48,16 +48,29 @@ ALTER TABLE zastepy_szkoly
 add CONSTRAINT FK_id_szkola_zastepy_szkoly
 FOREIGN KEY (id_szkola) REFERENCES szkola(id_szkola);
 
-ALTER TABLE funkcja
-add CONSTRAINT FK_id_harcerka_funkcja
-FOREIGN KEY (id_harcerka) REFERENCES harcerka(id_harcerka);
-
-/*
 ALTER TABLE osoba_funkcyjna
 add CONSTRAINT FK_id_funkcja_osoba_funkcyjna
 FOREIGN KEY (id_funkcja) REFERENCES funkcja(id_funkcja);
 ALTER TABLE osoba_funkcyjna
 add CONSTRAINT FK_id_harcerka_osoba_funkcyjna
+FOREIGN KEY (id_harcerka) REFERENCES harcerka(id_harcerka);
+ALTER TABLE osoba_funkcyjna
+add CONSTRAINT FK_id_zastep_osoba_funkcyjna
+FOREIGN KEY (id_zastep) REFERENCES zastep(id_zastep);
+
+ALTER TABLE chusta
+add CONSTRAINT FK_id_chusta_chusta
+FOREIGN KEY (id_chusta) REFERENCES chusta(id_chusta);
+ALTER TABLE chusta
+add CONSTRAINT FK_id_harcerka_chusta
+FOREIGN KEY (id_harcerka) REFERENCES harcerka(id_harcerka);
+ALTER TABLE chusta
+add CONSTRAINT FK_id_opiekunka_chusta
+FOREIGN KEY (id_opiekunka) REFERENCES opiekunka(id_opiekunka);
+
+/*
+ALTER TABLE funkcja
+add CONSTRAINT FK_id_harcerka_funkcja
 FOREIGN KEY (id_harcerka) REFERENCES harcerka(id_harcerka);
 ALTER TABLE stopnie_harcerki
 add CONSTRAINT FK_id_harcerka_stopnie_harcerki

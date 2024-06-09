@@ -1,9 +1,6 @@
 SET DATEFORMAT dmy;
 
-if DB_ID('harcerki') is not null
-  use harcerki
-else
-  CREATE DATABASE harcerki;
+use harcerki
 
 CREATE TABLE adres (
   id_adres INTEGER PRIMARY KEY,
@@ -32,20 +29,26 @@ CREATE TABLE harcerka (
   id_harcerka INTEGER PRIMARY KEY,
   id_podstawowe_dane INTEGER
 );
-CREATE TABLE umundurowanie (
-  id_umundurowanie INTEGER PRIMARY KEY,
-  id_opiekunka INTEGER,
-  id_harcerka INTEGER,
-  stopien_umundurowania VARCHAR(20) NOT NULL,
-  chusta VARCHAR(20) NOT NULL
+CREATE TABLE chusta (
+  id_chusta INTEGER PRIMARY KEY,
+  barwy VARCHAR(20) NOT NULL
 );
-
+CREATE TABLE chusta_harcerki (
+  id_chusta INTEGER,
+  id_harcerka INTEGER,
+  id_opiekunka INTEGER,
+  data_przyznania DATE
+)
 
 CREATE TABLE funkcja (
   id_funkcja INTEGER PRIMARY KEY,
-  id_harcerka INTEGER,
-  nazwa VARCHAR NOT NULL,
+  nazwa VARCHAR(50) NOT NULL,
   opis TEXT NOT NULL
+);
+CREATE TABLE osoba_funkcyjna (
+  id_funkcja INTEGER,
+  id_harcerka INTEGER,
+  id_zastep INTEGER
 );
 
 
@@ -68,22 +71,20 @@ CREATE TABLE rodzice_harcerki (
 CREATE TABLE stopien_harcerski (
   id_stopien_harcerski INTEGER PRIMARY KEY,
   nazwa varchar(15) NOT NULL,
-  opis varchar NOT NULL,
-  data_rozpoczecia DATE NOT NULL,
-  data_zakonczenia DATE NOT NULL,
-  obrzedowe_elementy varchar NOT NULL,
-  rodzaj_zakonczenia varchar NOT NULL
+  obrzedowe_elementy VARCHAR(50) NOT NULL,
+  rodzaj_zakonczenia text NOT NULL
 );
 
 CREATE TABLE stopnie_harcerki (
   id_harcerka INTEGER,
-  id_stopien_harcerski INTEGER
+  id_stopien_harcerski INTEGER,
+  data_rozpoczecia DATE NOT NULL,
+  data_zakonczenia DATE
 );
 CREATE TABLE zastep (
   id_zastep INTEGER PRIMARY KEY,
-  nazwa varchar NOT NULL,
-  opis varchar,
-  obszar_dzialania varchar NOT NULL,
+  nazwa varchar(20) NOT NULL,
+  opis varchar(50),
   ilosc_osob INTEGER NOT NULL
 );
 
@@ -100,13 +101,9 @@ CREATE TABLE szkola (
 CREATE TABLE zastepy_szkoly (
   id_zastep INTEGER,
   id_szkola INTEGER
-)
+);
 
 /*
-CREATE TABLE osoba_funkcyjna (
-  id_funkcja INTEGER,
-  id_harcerka INTEGER
-);
 CREATE TABLE cecha (
   idcecha INTEGER UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
   opis TEXT NULL,

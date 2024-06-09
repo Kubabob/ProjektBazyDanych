@@ -5,41 +5,6 @@ else
 
 SET DATEFORMAT dmy;
 
-ALTER TABLE adres 
-    NOCHECK CONSTRAINT ALL;
-
-ALTER TABLE podstawowe_dane 
-    NOCHECK CONSTRAINT ALL;
-
-ALTER TABLE funkcja
-    NOCHECK CONSTRAINT ALL;
-
-ALTER TABLE stopien_harcerski
-    NOCHECK CONSTRAINT ALL;
-
-ALTER TABLE stopnie_harcerki
-    NOCHECK CONSTRAINT ALL;
-
-ALTER TABLE zastep
-    NOCHECK CONSTRAINT ALL;
-
-ALTER TABLE zastep_harcerki
-    NOCHECK CONSTRAINT ALL;
-
-ALTER TABLE rodzice
-    NOCHECK CONSTRAINT ALL;
-
-ALTER TABLE rodzice_harcerki
-    NOCHECK CONSTRAINT ALL;
-
-ALTER TABLE opiekunka 
-    NOCHECK CONSTRAINT ALL;
-
-ALTER TABLE harcerka
-    NOCHECK CONSTRAINT ALL;
-
-ALTER TABLE umundurowanie
-    NOCHECK CONSTRAINT ALL;
 
 insert into adres(id_adres, ulica, numer, kod, miejscowosc) values (1, 'Dedela', '2/1/6', '81-197', 'Gdynia');
 insert into adres(id_adres, ulica, numer, kod, miejscowosc) values (2, 'Czwartaków', '3/23', '81-115', 'Gdynia');
@@ -128,16 +93,16 @@ insert into rodzice(id_rodzice, id_adres, imie_matki, imie_ojca, numer_matki, nu
 insert into rodzice(id_rodzice, id_adres, imie_matki, imie_ojca, numer_matki, numer_ojca, mail) values (25, 25, 'Agnieszka', 'Bartłomiej', '737495475', '500895410', 'aczyzewska82@gmail.com');
 
 
-insert into szkola(id_szkola, nazwa) values (1, 'sp 28 Babie D.')
-insert into szkola(id_szkola, nazwa) values (2, 'katolik')
-insert into szkola(id_szkola, nazwa) values (3, 'sp 33 Gdynia')
-insert into szkola(id_szkola, nazwa) values (4, 'sp Pogórze')
-insert into szkola(id_szkola, nazwa) values (5, 'plastyk')
-insert into szkola(id_szkola, nazwa) values (6, '9 LO')
-insert into szkola(id_szkola, nazwa) values (7, 'sp Mosty')
-insert into szkola(id_szkola, nazwa) values (8, 'sp Dębogórze')
-insert into szkola(id_szkola, nazwa) values (9, 'I LO Sopot')
-insert into szkola(id_szkola, nazwa) values (10, 'XIV LO')
+insert into szkola(id_szkola, nazwa) values (1, 'sp 28 Babie D.');
+insert into szkola(id_szkola, nazwa) values (2, 'katolik');
+insert into szkola(id_szkola, nazwa) values (3, 'sp 33 Gdynia');
+insert into szkola(id_szkola, nazwa) values (4, 'sp Pogórze');
+insert into szkola(id_szkola, nazwa) values (5, 'plastyk');
+insert into szkola(id_szkola, nazwa) values (6, '9 LO');
+insert into szkola(id_szkola, nazwa) values (7, 'sp Mosty');
+insert into szkola(id_szkola, nazwa) values (8, 'sp Dębogórze');
+insert into szkola(id_szkola, nazwa) values (9, 'I LO Sopot');
+insert into szkola(id_szkola, nazwa) values (10, 'XIV LO');
 
 
 insert into zastepy_szkoly(id_szkola, id_zastep) values (1, 1);
@@ -153,6 +118,59 @@ insert into zastepy_szkoly(id_szkola, id_zastep) values (7, 4);
 insert into zastepy_szkoly(id_szkola, id_zastep) values (8, 4);
 insert into zastepy_szkoly(id_szkola, id_zastep) values (9, 5);
 insert into zastepy_szkoly(id_szkola, id_zastep) values (10, 5);
+
+insert into zastep(id_zastep, nazwa, ilosc_osob) values (1, 'Apatura Iris', '7');
+insert into zastep(id_zastep, nazwa, ilosc_osob) values (2, 'Leśne Dzwonki', '10');
+insert into zastep(id_zastep, nazwa, ilosc_osob) values (3, 'Irysy', '6');
+insert into zastep(id_zastep, nazwa, ilosc_osob) values (4, 'Stominajki', '8');
+insert into zastep(id_zastep, nazwa, ilosc_osob) values (5, 'kadra', '2');
+
+
+insert into harcerka(id_harcerka, id_podstawowe_dane) values (1, 1);
+insert into harcerka(id_harcerka, id_podstawowe_dane) values (2, 2);
+insert into harcerka(id_harcerka, id_podstawowe_dane) values (3, 3);
+insert into harcerka(id_harcerka, id_podstawowe_dane) values (4, 4);
+insert into harcerka(id_harcerka, id_podstawowe_dane) values (5, 5);
+insert into harcerka(id_harcerka, id_podstawowe_dane) values (6, 6);
+insert into harcerka(id_harcerka, id_podstawowe_dane) values (7, 7);
+insert into harcerka(id_harcerka, id_podstawowe_dane) values (8, 8);
+insert into harcerka(id_harcerka, id_podstawowe_dane) values (9, 9);
+insert into harcerka(id_harcerka, id_podstawowe_dane) values (10, 10);
+insert into harcerka(id_harcerka, id_podstawowe_dane) values (11, 11);
+insert into harcerka(id_harcerka, id_podstawowe_dane) values (12, 12);
+insert into harcerka(id_harcerka, id_podstawowe_dane) values (13, 13);
+insert into harcerka(id_harcerka, id_podstawowe_dane) values (14, 14);
+insert into harcerka(id_harcerka, id_podstawowe_dane) values (15, 15);
+insert into harcerka(id_harcerka, id_podstawowe_dane) values (16, 16);
+insert into harcerka(id_harcerka, id_podstawowe_dane) values (17, 17);
+insert into harcerka(id_harcerka, id_podstawowe_dane) values (18, 18);
+insert into harcerka(id_harcerka, id_podstawowe_dane) values (19, 19);
+insert into harcerka(id_harcerka, id_podstawowe_dane) values (20, 20);
+insert into harcerka(id_harcerka, id_podstawowe_dane) values (21, 21);
+insert into harcerka(id_harcerka, id_podstawowe_dane) values (22, 22);
+insert into harcerka(id_harcerka, id_podstawowe_dane) values (23, 23);
+insert into harcerka(id_harcerka, id_podstawowe_dane) values (24, 24);
+insert into harcerka(id_harcerka, id_podstawowe_dane) values (25, 25);
+insert into harcerka(id_harcerka, id_podstawowe_dane) values (26, 26);
+insert into harcerka(id_harcerka, id_podstawowe_dane) values (27, 27);
+insert into harcerka(id_harcerka, id_podstawowe_dane) values (28, 28);
+insert into harcerka(id_harcerka, id_podstawowe_dane) values (29, 29);
+insert into harcerka(id_harcerka, id_podstawowe_dane) values (30, 30);
+insert into harcerka(id_harcerka, id_podstawowe_dane) values (31, 31);
+insert into harcerka(id_harcerka, id_podstawowe_dane) values (32, 32);
+insert into harcerka(id_harcerka, id_podstawowe_dane) values (33, 33);
+
+
+insert into funkcja(id_funkcja, nazwa, opis) values (1, 'zastępowa', 'brązowy sznur, prowadzi zastęp');
+insert into funkcja(id_funkcja, nazwa, opis) values (2, 'podzastępowa', 'szary sznur z brązową beczką, pomaga zastępowej prowadzić zastęp');
+insert into funkcja(id_funkcja, nazwa, opis) values (3, 'przyboczna', 'zielony sznur, pomaga drużynowej prowadzić drużynę');
+insert into funkcja(id_funkcja, nazwa, opis) values (4, 'kwatermistrzyni', 'czerwony sznur, zajmuje się finansami jednostki');
+
+insert into stopien_harcerski(id_stopien_harcerski, nazwa, obrzedowe_elementy, rodzaj_zakonczenia) values (1, 'kandydatka', 'zadania na chustę', 'zawiązane oczy i w nocy gra do przyznania chusty');
+insert into stopien_harcerski(id_stopien_harcerski, nazwa, obrzedowe_elementy, rodzaj_zakonczenia) values (2, 'druhna', 'list', 'spotkanie na rozpisanie stopnia');
+insert into stopien_harcerski(id_stopien_harcerski, nazwa, obrzedowe_elementy, rodzaj_zakonczenia) values (3, 'ochotniczka', 'kolaż gustu muzycznego, zdjęcie z chatą', 'Przyrzeczenie Harcerskie na ogień, ścieżka po Prawie Harcerskim');
+insert into stopien_harcerski(id_stopien_harcerski, nazwa, obrzedowe_elementy, rodzaj_zakonczenia) values (4, 'tropicielka', 'upiec chleb', 'harce związane z tropieniem');
+insert into stopien_harcerski(id_stopien_harcerski, nazwa, obrzedowe_elementy, rodzaj_zakonczenia) values (5, 'samarytanka', 'przeczytać "Chatę"', 'harce związane z pomocą innym, Piccollo na koniec');
 
 
 /*
