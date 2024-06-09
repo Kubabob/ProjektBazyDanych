@@ -43,14 +43,11 @@ CREATE TABLE umundurowanie (
 
 CREATE TABLE funkcja (
   id_funkcja INTEGER PRIMARY KEY,
+  id_harcerka INTEGER,
   nazwa VARCHAR NOT NULL,
   opis TEXT NOT NULL
 );
 
-CREATE TABLE osoba_funkcyjna (
-  id_funkcja INTEGER,
-  id_harcerka INTEGER
-);
 
 
 CREATE TABLE rodzice (
@@ -97,7 +94,7 @@ CREATE TABLE zastep_harcerki (
 
 CREATE TABLE szkola (
   id_szkola INTEGER PRIMARY KEY,
-  nazwa VARCHAR
+  nazwa VARCHAR(30)
 )
 
 CREATE TABLE zastepy_szkoly (
@@ -106,6 +103,10 @@ CREATE TABLE zastepy_szkoly (
 )
 
 /*
+CREATE TABLE osoba_funkcyjna (
+  id_funkcja INTEGER,
+  id_harcerka INTEGER
+);
 CREATE TABLE cecha (
   idcecha INTEGER UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
   opis TEXT NULL,

@@ -14,9 +14,6 @@ ALTER TABLE podstawowe_dane
 ALTER TABLE funkcja
     NOCHECK CONSTRAINT ALL;
 
-ALTER TABLE osoba_funkcyjna
-    NOCHECK CONSTRAINT ALL; 
-
 ALTER TABLE stopien_harcerski
     NOCHECK CONSTRAINT ALL;
 
@@ -143,6 +140,19 @@ insert into szkola(id_szkola, nazwa) values (9, 'I LO Sopot')
 insert into szkola(id_szkola, nazwa) values (10, 'XIV LO')
 
 
+insert into zastepy_szkoly(id_szkola, id_zastep) values (1, 1);
+insert into zastepy_szkoly(id_szkola, id_zastep) values (2, 1);
+insert into zastepy_szkoly(id_szkola, id_zastep) values (2, 2);
+insert into zastepy_szkoly(id_szkola, id_zastep) values (2, 3);
+insert into zastepy_szkoly(id_szkola, id_zastep) values (3, 1);
+insert into zastepy_szkoly(id_szkola, id_zastep) values (4, 2);
+insert into zastepy_szkoly(id_szkola, id_zastep) values (4, 3);
+insert into zastepy_szkoly(id_szkola, id_zastep) values (5, 3);
+insert into zastepy_szkoly(id_szkola, id_zastep) values (6, 4);
+insert into zastepy_szkoly(id_szkola, id_zastep) values (7, 4);
+insert into zastepy_szkoly(id_szkola, id_zastep) values (8, 4);
+insert into zastepy_szkoly(id_szkola, id_zastep) values (9, 5);
+insert into zastepy_szkoly(id_szkola, id_zastep) values (10, 5);
 
 
 /*

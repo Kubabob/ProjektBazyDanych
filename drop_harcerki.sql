@@ -20,4 +20,6 @@ drop TABLE if EXISTS umundurowanie;
 drop TABLE if EXISTS harcerka;
 drop TABLE if EXISTS opiekunka;
 
+drop TABLE if EXISTS szkola;
+drop TABLE if EXISTS zastepy_szkoly;
 
