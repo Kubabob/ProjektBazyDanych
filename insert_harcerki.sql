@@ -173,6 +173,76 @@ insert into stopien_harcerski(id_stopien_harcerski, nazwa, obrzedowe_elementy, r
 insert into stopien_harcerski(id_stopien_harcerski, nazwa, obrzedowe_elementy, rodzaj_zakonczenia) values (5, 'samarytanka', 'przeczytać "Chatę"', 'harce związane z pomocą innym, Piccollo na koniec');
 
 
+insert into rodzice_harcerki(id_harcerka, id_rodzice) values (1, 1);
+insert into rodzice_harcerki(id_harcerka, id_rodzice) values (2, 2);
+insert into rodzice_harcerki(id_harcerka, id_rodzice) values (3, 3);
+insert into rodzice_harcerki(id_harcerka, id_rodzice) values (4, 4);
+insert into rodzice_harcerki(id_harcerka, id_rodzice) values (5, 5);
+insert into rodzice_harcerki(id_harcerka, id_rodzice) values (6, 5);
+insert into rodzice_harcerki(id_harcerka, id_rodzice) values (7, 6);
+insert into rodzice_harcerki(id_harcerka, id_rodzice) values (8, 7);
+insert into rodzice_harcerki(id_harcerka, id_rodzice) values (9, 7);
+insert into rodzice_harcerki(id_harcerka, id_rodzice) values (10, 8);
+insert into rodzice_harcerki(id_harcerka, id_rodzice) values (11, 8);
+insert into rodzice_harcerki(id_harcerka, id_rodzice) values (12, 9);
+insert into rodzice_harcerki(id_harcerka, id_rodzice) values (13, 9);
+insert into rodzice_harcerki(id_harcerka, id_rodzice) values (14, 10);
+insert into rodzice_harcerki(id_harcerka, id_rodzice) values (15, 11);
+insert into rodzice_harcerki(id_harcerka, id_rodzice) values (16, 11);
+insert into rodzice_harcerki(id_harcerka, id_rodzice) values (17, 10);
+insert into rodzice_harcerki(id_harcerka, id_rodzice) values (18, 13);
+insert into rodzice_harcerki(id_harcerka, id_rodzice) values (19, 14);
+insert into rodzice_harcerki(id_harcerka, id_rodzice) values (20, 14);
+insert into rodzice_harcerki(id_harcerka, id_rodzice) values (21, 15);
+insert into rodzice_harcerki(id_harcerka, id_rodzice) values (22, 16);
+insert into rodzice_harcerki(id_harcerka, id_rodzice) values (23, 17);
+insert into rodzice_harcerki(id_harcerka, id_rodzice) values (24, 18);
+insert into rodzice_harcerki(id_harcerka, id_rodzice) values (25, 19);
+insert into rodzice_harcerki(id_harcerka, id_rodzice) values (26, 20);
+insert into rodzice_harcerki(id_harcerka, id_rodzice) values (27, 21);
+insert into rodzice_harcerki(id_harcerka, id_rodzice) values (28, 22);
+insert into rodzice_harcerki(id_harcerka, id_rodzice) values (29, 23);
+insert into rodzice_harcerki(id_harcerka, id_rodzice) values (30, 23);
+insert into rodzice_harcerki(id_harcerka, id_rodzice) values (31, 25);
+insert into rodzice_harcerki(id_harcerka, id_rodzice) values (32, 1);
+insert into rodzice_harcerki(id_harcerka, id_rodzice) values (33, 8);
+
+
+insert into zastep_harcerki(id_harcerka, id_zastep) values (1, 1);
+insert into zastep_harcerki(id_harcerka, id_zastep) values (2, 1);
+insert into zastep_harcerki(id_harcerka, id_zastep) values (3, 1);
+insert into zastep_harcerki(id_harcerka, id_zastep) values (4, 1);
+insert into zastep_harcerki(id_harcerka, id_zastep) values (5, 1);
+insert into zastep_harcerki(id_harcerka, id_zastep) values (6, 1);
+insert into zastep_harcerki(id_harcerka, id_zastep) values (7, 1);
+insert into zastep_harcerki(id_harcerka, id_zastep) values (8, 2);
+insert into zastep_harcerki(id_harcerka, id_zastep) values (9, 2);
+insert into zastep_harcerki(id_harcerka, id_zastep) values (10, 2);
+insert into zastep_harcerki(id_harcerka, id_zastep) values (11, 2);
+insert into zastep_harcerki(id_harcerka, id_zastep) values (12, 2);
+insert into zastep_harcerki(id_harcerka, id_zastep) values (13, 2);
+insert into zastep_harcerki(id_harcerka, id_zastep) values (14, 2);
+insert into zastep_harcerki(id_harcerka, id_zastep) values (15, 2);
+insert into zastep_harcerki(id_harcerka, id_zastep) values (16, 2);
+insert into zastep_harcerki(id_harcerka, id_zastep) values (17, 2);
+insert into zastep_harcerki(id_harcerka, id_zastep) values (18, 3);
+insert into zastep_harcerki(id_harcerka, id_zastep) values (19, 3);
+insert into zastep_harcerki(id_harcerka, id_zastep) values (20, 3);
+insert into zastep_harcerki(id_harcerka, id_zastep) values (21, 3);
+insert into zastep_harcerki(id_harcerka, id_zastep) values (22, 3);
+insert into zastep_harcerki(id_harcerka, id_zastep) values (23, 3);
+insert into zastep_harcerki(id_harcerka, id_zastep) values (24, 4);
+insert into zastep_harcerki(id_harcerka, id_zastep) values (25, 4);
+insert into zastep_harcerki(id_harcerka, id_zastep) values (26, 4);
+insert into zastep_harcerki(id_harcerka, id_zastep) values (27, 4);
+insert into zastep_harcerki(id_harcerka, id_zastep) values (28, 4);
+insert into zastep_harcerki(id_harcerka, id_zastep) values (29, 4);
+insert into zastep_harcerki(id_harcerka, id_zastep) values (30, 4);
+insert into zastep_harcerki(id_harcerka, id_zastep) values (31, 4);
+insert into zastep_harcerki(id_harcerka, id_zastep) values (32, 5);
+insert into zastep_harcerki(id_harcerka, id_zastep) values (33, 5);
+
+
 /*
 ALTER TABLE adres 
     CHECK CONSTRAINT ALL;

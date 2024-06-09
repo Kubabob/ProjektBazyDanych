@@ -10,9 +10,9 @@ SELECT * from zastep;
 SELECT * from harcerka;
 select * from funkcja;
 SELECT * from stopien_harcerski;
+select * from rodzice_harcerki;
+SELECT * from zastep_harcerki;
 
 /*
 select * from osoba_funkcyjna;
-select * from rodzice_harcerki;
-SELECT * from zastep_harcerki;
 */
