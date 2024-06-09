@@ -56,3 +56,10 @@ FOREIGN KEY (id_harcerka) REFERENCES harcerka(id_harcerka);
 ALTER TABLE zastep_harcerki
 add CONSTRAINT FK_id_zastep_zastep_harcerki
 FOREIGN KEY (id_zastep) REFERENCES zastep(id_zastep);
+
+ALTER TABLE zastepy_szkoly
+add CONSTRAINT FK_id_zastep_zastepy_szkoly
+FOREIGN KEY (id_zastep) REFERENCES zastep(id_zastep);
+ALTER TABLE zastepy_szkoly
+add CONSTRAINT FK_id_szkola_zastepy_szkoly
+FOREIGN KEY (id_szkola) REFERENCES szkola(id_szkola);

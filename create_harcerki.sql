@@ -60,7 +60,7 @@ CREATE TABLE rodzice (
   imie_ojca varchar(10) NOT NULL,
   numer_matki decimal(9),
   numer_ojca decimal(9),
-  mail varchar
+  mail varchar(50)
 );
 
 CREATE TABLE rodzice_harcerki (
@@ -85,7 +85,7 @@ CREATE TABLE stopnie_harcerki (
 CREATE TABLE zastep (
   id_zastep INTEGER PRIMARY KEY,
   nazwa varchar NOT NULL,
-  opis varchar NOT NULL,
+  opis varchar,
   obszar_dzialania varchar NOT NULL,
   ilosc_osob INTEGER NOT NULL
 );
@@ -94,6 +94,16 @@ CREATE TABLE zastep_harcerki (
   id_harcerka INTEGER,
   id_zastep INTEGER
 );
+
+CREATE TABLE szkola (
+  id_szkola INTEGER PRIMARY KEY,
+  nazwa VARCHAR
+)
+
+CREATE TABLE zastepy_szkoly (
+  id_zastep INTEGER,
+  id_szkola INTEGER
+)
 
 /*
 CREATE TABLE cecha (
