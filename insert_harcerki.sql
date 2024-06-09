@@ -131,6 +131,18 @@ insert into rodzice(id_rodzice, id_adres, imie_matki, imie_ojca, numer_matki, nu
 insert into rodzice(id_rodzice, id_adres, imie_matki, imie_ojca, numer_matki, numer_ojca, mail) values (25, 25, 'Agnieszka', 'Bartłomiej', '737495475', '500895410', 'aczyzewska82@gmail.com');
 
 
+insert into szkola(id_szkola, nazwa) values (1, 'sp 28 Babie D.')
+insert into szkola(id_szkola, nazwa) values (2, 'katolik')
+insert into szkola(id_szkola, nazwa) values (3, 'sp 33 Gdynia')
+insert into szkola(id_szkola, nazwa) values (4, 'sp Pogórze')
+insert into szkola(id_szkola, nazwa) values (5, 'plastyk')
+insert into szkola(id_szkola, nazwa) values (6, '9 LO')
+insert into szkola(id_szkola, nazwa) values (7, 'sp Mosty')
+insert into szkola(id_szkola, nazwa) values (8, 'sp Dębogórze')
+insert into szkola(id_szkola, nazwa) values (9, 'I LO Sopot')
+insert into szkola(id_szkola, nazwa) values (10, 'XIV LO')
+
+
 
 
 /*
