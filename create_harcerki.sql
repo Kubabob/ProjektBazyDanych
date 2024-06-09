@@ -1,141 +1,120 @@
 SET DATEFORMAT ymd;
 
-
-CREATE TABLE klient (
-  id_klient INTEGER NOT NULL PRIMARY KEY,
-  id_adres INTEGER NOT NULL UNIQUE REFERENCES adres(id_adres),
-  imie VARCHAR(25) NOT NULL,
-  nazwisko VARCHAR(30) NOT NULL,
-  pesel CHAR(11) NOT NULL UNIQUE,
-  telefon VARCHAR(20) NOT NULL,
-  email VARCHAR(30) NOT NULL,
-  haslo VARCHAR(30) NOT NULL,
-  rabat INTEGER NOT NULL DEFAULT 0,
-  data_dodania DATETIME NOT NULL,
-  usuniety BIT NOT NULL DEFAULT 0
-);
 CREATE TABLE adres (
-  id_adres INTEGER NOT NULL PRIMARY KEY,
-  miejscowość CHAR NOT NULL,
-  ulica TEXT NOT NULL,
-  numer_domu INTEGER UNSIGNED NULL,
-  kod_pocztowy TEXT NULL,
-  PRIMARY KEY(idadres)
-);
-
-CREATE TABLE adres (
-  id_adres INTEGER NOT NULL PRIMARY KEY,
+  id_adres INTEGER PRIMARY KEY,
   ulica VARCHAR(50) NOT NULL,
-  numer VARCHAR(10) NOT NULL,
+  numer VARCHAR(5) NOT NULL,
   kod CHAR(11) NOT NULL,
   miejscowosc VARCHAR(30) NOT NULL
 );
 
-CREATE TABLE cecha (
-  idcecha INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  opis TEXT NULL,
-  czy_dobra BOOL NULL,
-  działanie TEXT NULL,
-  PRIMARY KEY(idcecha)
+
+CREATE TABLE podstawowe_dane (
+  id_podstawowe_dane INTEGER PRIMARY KEY,
+  id_adres INTEGER NOT NULL FOREIGN KEY REFERENCES adres(id_adres),
+  imie VARCHAR(10) NOT NULL,
+  nazwisko VARCHAR(15) NOT NULL,
+  PESEL DECIMAL(11) NOT NULL,
+  data_urodzenia DATE NOT NULL,
+  data_dolaczenia DATE NOT NULL,
+  data_odejscia DATE NOT NULL,
+);
+CREATE TABLE opiekunka (
+  id_opiekunka INTEGER PRIMARY KEY,
+  id_podstawowe_dane INTEGER FOREIGN KEY REFERENCES podstawowe_dane(id_podstawowe_dane)
+);
+CREATE TABLE harcerka (
+  id_harcerka INTEGER PRIMARY KEY,
+  id_podstawowe_dane INTEGER FOREIGN KEY REFERENCES podstawowe_dane(id_podstawowe_dane)
+);
+CREATE TABLE umundurowanie (
+  id_umundurowanie INTEGER PRIMARY KEY,
+  id_opiekunka INTEGER FOREIGN KEY REFERENCES opiekunka(id_opiekunka),
+  id_harcerka INTEGER FOREIGN KEY REFERENCES harcerka(id_harcerka),
+  stopien_umundurowania VARCHAR(20) NOT NULL,
+  chusta VARCHAR(20) NOT NULL
 );
 
-CREATE TABLE cechy_harcerki (
-  idharcerka INTEGER UNSIGNED NOT NULL,
-  idcecha INTEGER UNSIGNED NOT NULL
-);
 
 CREATE TABLE funkcja (
-  idfunkcja INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  nazwa CHAR NULL,
-  opis TEXT NULL,
-  PRIMARY KEY(idfunkcja)
-);
-
-CREATE TABLE harcerka (
-  idharcerka INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  idpodstawowe_dane INTEGER UNSIGNED NOT NULL,
-  PRIMARY KEY(idharcerka)
-);
-
-CREATE TABLE opiekunka (
-  idopiekunka INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  idpodstawowe_dane INTEGER UNSIGNED NOT NULL,
-  PRIMARY KEY(idopiekunka)
+  id_funkcja INTEGER PRIMARY KEY,
+  nazwa VARCHAR NOT NULL,
+  opis TEXT NOT NULL
 );
 
 CREATE TABLE osoba_funkcyjna (
-  idfunkcja INTEGER UNSIGNED NOT NULL,
-  idharcerka INTEGER UNSIGNED NOT NULL,
-  PRIMARY KEY(idfunkcja, idharcerka)
+  id_funkcja INTEGER FOREIGN KEY REFERENCES funkcja(id_funkcja),
+  id_harcerka INTEGER FOREIGN KEY REFERENCES harcerka(id_harcerka)
 );
 
-CREATE TABLE podstawowe_dane (
-  idpodstawowe_dane INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  idadres INTEGER UNSIGNED NOT NULL,
-  imie CHAR NULL,
-  nazwisko CHAR NULL,
-  PESEL INTEGER UNSIGNED NULL,
-  data_urodzenia DATE NULL,
-  data_dolaczenia DATE NULL,
-  data_odejscia DATE NULL,
-  PRIMARY KEY(idpodstawowe_dane)
-);
 
 CREATE TABLE rodzice (
-  idrodzice INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  idadres INTEGER UNSIGNED NOT NULL,
-  imie_matki CHAR NULL,
-  imie_ojca CHAR NULL,
-  PRIMARY KEY(idrodzice)
+  id_rodzice INTEGER PRIMARY KEY,
+  id_adres INTEGER FOREIGN KEY REFERENCES adres(id_adres),
+  imie_matki VARCHAR(10) NOT NULL,
+  imie_ojca varchar(10) NOT NULL
 );
 
 CREATE TABLE rodzice_harcerki (
-  idharcerka INTEGER UNSIGNED NOT NULL,
-  idrodzice INTEGER UNSIGNED NOT NULL,
-  PRIMARY KEY(idharcerka, idrodzice)
-);
-
-CREATE TABLE skladka (
-  idskladka INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  ile_kwartalow INTEGER UNSIGNED NULL,
-  PRIMARY KEY(idskladka)
-);
-
-CREATE TABLE skladki_harcerki (
-  idskladka INTEGER UNSIGNED NOT NULL,
-  idharcerka INTEGER UNSIGNED NOT NULL
+  id_harcerka INTEGER FOREIGN KEY REFERENCES harcerka(id_harcerka),
+  id_rodzice INTEGER FOREIGN KEY REFERENCES rodzice(id_rodzice)
 );
 
 CREATE TABLE stopien_harcerski (
-  idstopien_harcerski INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  nazwa CHAR NULL,
-  opis TEXT NULL,
-  data_rozpoczecia DATE NULL,
-  data_zakonczenia DATE NULL,
-  obrzedowe_elementy TEXT NULL,
-  rodzaj_zakonczenia TEXT NULL,
-  PRIMARY KEY(idstopien_harcerski)
+  id_stopien_harcerski INTEGER PRIMARY KEY,
+  nazwa varchar(15) NOT NULL,
+  opis varchar NOT NULL,
+  data_rozpoczecia DATE NOT NULL,
+  data_zakonczenia DATE NOT NULL,
+  obrzedowe_elementy varchar NOT NULL,
+  rodzaj_zakonczenia varchar NOT NULL
 );
 
 CREATE TABLE stopnie_harcerki (
-  idharcerka INTEGER UNSIGNED NOT NULL,
-  idstopien_harcerski INTEGER UNSIGNED NOT NULL,
-  PRIMARY KEY(idharcerka, idstopien_harcerski)
+  id_harcerka INTEGER FOREIGN KEY REFERENCES harcerka(id_harcerka),
+  id_stopien_harcerski INTEGER FOREIGN KEY REFERENCES stopien_harcerski(id_stopien_harcerski)
+);
+CREATE TABLE zastep (
+  id_zastep INTEGER PRIMARY KEY,
+  nazwa varchar NOT NULL,
+  opis varchar NOT NULL,
+  obszar_dzialania varchar NOT NULL,
+  ilosc_osob INTEGER NOT NULL
 );
 
-CREATE TABLE umundurowanie (
-  idumundurowanie INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  idopiekunka INTEGER UNSIGNED NOT NULL,
-  idharcerka INTEGER UNSIGNED NOT NULL,
-  stopien_umundurowania TEXT NULL,
-  chusta TEXT NULL,
-  PRIMARY KEY(idumundurowanie, idopiekunka)
+CREATE TABLE zastep_harcerki (
+  id_harcerka INTEGER FOREIGN KEY REFERENCES harcerka(id_harcerka),
+  id_zastep INTEGER FOREIGN KEY REFERENCES zastep(id_zastep)
 );
+
+/*
+CREATE TABLE cecha (
+  idcecha INTEGER UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  opis TEXT NULL,
+  czy_dobra BOOL NULL,
+  działanie TEXT NULL
+);
+
+CREATE TABLE cechy_harcerki (
+  id_harcerka INTEGER UNSIGNED NOT NULL,
+  idcecha INTEGER UNSIGNED NOT NULL
+);
+
+CREATE TABLE skladka (
+  id_skladka INTEGER PRIMARY KEY,
+  ile_kwartalow INTEGER NOT NULL
+);
+
+CREATE TABLE skladki_harcerki (
+  id_skladka INTEGER FOREIGN KEY REFERENCES skladka(id_skladka),
+  id_harcerka INTEGER FOREIGN KEY REFERENCES harcerka(id_harcerka)
+);
+
 
 CREATE TABLE wydarzenia_harcerki (
-  idharcerka INTEGER UNSIGNED NOT NULL,
+  id_harcerka INTEGER UNSIGNED NOT NULL,
   idwydarzenie INTEGER UNSIGNED NOT NULL,
-  PRIMARY KEY(idharcerka, idwydarzenie)
+  PRIMARY KEY(id_harcerka, idwydarzenie)
 );
 
 CREATE TABLE wydarzenie (
@@ -145,20 +124,7 @@ CREATE TABLE wydarzenie (
   rodzaj TEXT NULL,
   PRIMARY KEY(idwydarzenie)
 );
+*/
 
-CREATE TABLE zastep (
-  idzastep INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  nazwa TEXT NULL,
-  opis TEXT NULL,
-  obszar_dzialania TEXT NULL,
-  ilosc_osob INTEGER UNSIGNED NULL,
-  PRIMARY KEY(idzastep)
-);
-
-CREATE TABLE zastep_harcerki (
-  idharcerka INTEGER UNSIGNED NOT NULL,
-  idzastep INTEGER UNSIGNED NOT NULL,
-  PRIMARY KEY(idharcerka, idzastep)
-);
 
 
