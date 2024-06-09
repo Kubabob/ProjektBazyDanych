@@ -1,5 +1,10 @@
 SET DATEFORMAT ymd;
 
+if DB_ID('harcerki') is not null
+  use harcerki
+else
+  CREATE DATABASE harcerki;
+
 CREATE TABLE adres (
   id_adres INTEGER PRIMARY KEY,
   ulica VARCHAR(50) NOT NULL,
@@ -52,7 +57,9 @@ CREATE TABLE rodzice (
   id_rodzice INTEGER PRIMARY KEY,
   id_adres INTEGER FOREIGN KEY REFERENCES adres(id_adres),
   imie_matki VARCHAR(10) NOT NULL,
-  imie_ojca varchar(10) NOT NULL
+  imie_ojca varchar(10) NOT NULL,
+  numer decimal(9),
+  mail varchar
 );
 
 CREATE TABLE rodzice_harcerki (
