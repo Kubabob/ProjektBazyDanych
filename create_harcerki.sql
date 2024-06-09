@@ -58,7 +58,8 @@ CREATE TABLE rodzice (
   id_adres INTEGER,
   imie_matki VARCHAR(10) NOT NULL,
   imie_ojca varchar(10) NOT NULL,
-  numer decimal(9),
+  numer_matki decimal(9),
+  numer_ojca decimal(9),
   mail varchar
 );
 

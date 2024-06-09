@@ -104,6 +104,31 @@ insert into podstawowe_dane(id_podstawowe_dane, id_adres, imie, nazwisko, PESEL,
 insert into podstawowe_dane(id_podstawowe_dane, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (32, 1, 'Dorota', 'Pawlak', '07262602720', '26-06-2007');
 insert into podstawowe_dane(id_podstawowe_dane, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (33, 8, 'Marysia', 'Splitt', '07210301701', '03-01-2007');
 
+insert into rodzice(id_rodzice, imie_matki, imie_ojca, numer_matki, numer_ojca, mail) values (1, 'Barbara', 'Robert', '503382546', '501398277', 'basiap224@wp.pl');
+insert into rodzice(id_rodzice, imie_matki, imie_ojca, numer_matki, numer_ojca, mail) values (2, 'Ewa', 'Tomasz', '503128205', '533454908', 'ewarudzka37@gmail.com');
+insert into rodzice(id_rodzice, imie_matki, imie_ojca, numer_matki, numer_ojca, mail) values (3, 'Monika', 'Remigiusz', '692834642', '500051035', 'rguza@wp.pl');
+insert into rodzice(id_rodzice, imie_matki, imie_ojca, numer_matki, numer_ojca, mail) values (4, 'Alicja', 'Marcin', '506026200', '513093073', 'zukowska.alicja@gmail.com');
+insert into rodzice(id_rodzice, imie_matki, imie_ojca, numer_matki, numer_ojca, mail) values (5, 'Beata', 'Grzegorz', '691636163', '504803478', 'beata2187@op.pl');
+insert into rodzice(id_rodzice, imie_matki, imie_ojca, numer_matki, numer_ojca, mail) values (6, 'Justyna', 'Przemysław', '609323525', '605489447', 'justynapikus@wp.pl');
+insert into rodzice(id_rodzice, imie_matki, imie_ojca, numer_matki, numer_ojca, mail) values (7, 'Regina', 'Andrzej', '605056914', '729968579', 'rkochanska@gmail.com');
+insert into rodzice(id_rodzice, imie_matki, imie_ojca, numer_matki, numer_ojca, mail) values (8, 'Dorota', 'Sławomir', '500073388', '501835934', 'gerdora@op.pl');
+insert into rodzice(id_rodzice, imie_matki, imie_ojca, numer_matki, numer_ojca, mail) values (9, 'Weronika', 'Piotr', '504248394', '504394122', 'weronikasendacka@gmail.com');
+insert into rodzice(id_rodzice, imie_matki, imie_ojca, numer_matki, numer_ojca, mail) values (10, 'Karolina', 'nan', '604658954', 'nan', 'karolka.krause@gmail.com');
+insert into rodzice(id_rodzice, imie_matki, imie_ojca, numer_matki, numer_ojca, mail) values (11, 'Anna', 'Artur', '660542523', '694136793', 'radzkaa@o2.pl');
+insert into rodzice(id_rodzice, imie_matki, imie_ojca, numer_matki, numer_ojca, mail) values (12, 'Karolina', 'Tomasz', '797426286', '780118728', 'tomaszgolata@gmail.com');
+insert into rodzice(id_rodzice, imie_matki, imie_ojca, numer_matki, numer_ojca, mail) values (13, 'Edyta', 'Czesław', '501416520', '507218209', 'czeslaw31@interia.pl');
+insert into rodzice(id_rodzice, imie_matki, imie_ojca, numer_matki, numer_ojca, mail) values (14, 'Ilona', 'Marcin', '571458136', 'nan', 'il-ona@wp.pl');
+insert into rodzice(id_rodzice, imie_matki, imie_ojca, numer_matki, numer_ojca, mail) values (15, 'Magdalena', 'Mariusz', '512201287', '504387678', 'woronieckamagdalena@gmail.com');
+insert into rodzice(id_rodzice, imie_matki, imie_ojca, numer_matki, numer_ojca, mail) values (16, 'Tamara', 'Henryk', '693060486', '601131894', 'hantonowicz@gmail.com');
+insert into rodzice(id_rodzice, imie_matki, imie_ojca, numer_matki, numer_ojca, mail) values (17, 'Iwona', 'Jerzy', '602208814', '605121073', 'ipast@op.pl');
+insert into rodzice(id_rodzice, imie_matki, imie_ojca, numer_matki, numer_ojca, mail) values (18, 'Kinga', 'Karol', '668295778', '606740557', 'kingaczarnecka17@gmail.com');
+insert into rodzice(id_rodzice, imie_matki, imie_ojca, numer_matki, numer_ojca, mail) values (19, 'Dorota', 'Marcin', '500203621', '501642463', 'dota82@wp.pl');
+insert into rodzice(id_rodzice, imie_matki, imie_ojca, numer_matki, numer_ojca, mail) values (20, 'Małgorzata', 'Marek', '509360870', '517140939', 'mzychska@gmail.com');
+insert into rodzice(id_rodzice, imie_matki, imie_ojca, numer_matki, numer_ojca, mail) values (21, 'Irma', 'nan', '788571626', 'nan', 'irmazak@wp.pl');
+insert into rodzice(id_rodzice, imie_matki, imie_ojca, numer_matki, numer_ojca, mail) values (22, 'Marcjanna', 'Rafał', '500389510', '516441589', 'marcjanna.zakowska@gmail.com');
+insert into rodzice(id_rodzice, imie_matki, imie_ojca, numer_matki, numer_ojca, mail) values (23, 'Katarzyna', 'nan', '510794425', 'nan', 'kasiaa-kukielka@wp.pl');
+insert into rodzice(id_rodzice, imie_matki, imie_ojca, numer_matki, numer_ojca, mail) values (24, 'Katarzyna', 'Jacek', '667222220', '609189504', 'k.radaszewska@wp.pl');
+insert into rodzice(id_rodzice, imie_matki, imie_ojca, numer_matki, numer_ojca, mail) values (25, 'Agnieszka', 'Bartłomiej', '737495475', '500895410', 'aczyzewska82@gmail.com');
 
 
 
