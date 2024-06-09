@@ -1,6 +1,9 @@
 if DB_ID('harcerki') is not null
     use harcerki;
 
+drop TABLE if EXISTS adres;
+drop TABLE if EXISTS podstawowe_dane;
+
 drop TABLE if EXISTS funkcja;
 drop TABLE if EXISTS osoba_funkcyjna;
 
@@ -16,7 +19,5 @@ drop TABLE if EXISTS rodzice_harcerki;
 drop TABLE if EXISTS umundurowanie;
 drop TABLE if EXISTS harcerka;
 drop TABLE if EXISTS opiekunka;
-drop TABLE if EXISTS podstawowe_dane;
 
 
-drop TABLE if EXISTS adres;

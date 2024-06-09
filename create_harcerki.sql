@@ -1,4 +1,4 @@
-SET DATEFORMAT ymd;
+SET DATEFORMAT dmy;
 
 if DB_ID('harcerki') is not null
   use harcerki
@@ -16,26 +16,26 @@ CREATE TABLE adres (
 
 CREATE TABLE podstawowe_dane (
   id_podstawowe_dane INTEGER PRIMARY KEY,
-  id_adres INTEGER NOT NULL FOREIGN KEY REFERENCES adres(id_adres),
+  id_adres INTEGER NOT NULL,
   imie VARCHAR(10) NOT NULL,
   nazwisko VARCHAR(15) NOT NULL,
   PESEL DECIMAL(11) NOT NULL,
   data_urodzenia DATE NOT NULL,
-  data_dolaczenia DATE NOT NULL,
-  data_odejscia DATE NOT NULL,
+  data_dolaczenia DATE,
+  data_odejscia DATE,
 );
 CREATE TABLE opiekunka (
   id_opiekunka INTEGER PRIMARY KEY,
-  id_podstawowe_dane INTEGER FOREIGN KEY REFERENCES podstawowe_dane(id_podstawowe_dane)
+  id_podstawowe_dane INTEGER
 );
 CREATE TABLE harcerka (
   id_harcerka INTEGER PRIMARY KEY,
-  id_podstawowe_dane INTEGER FOREIGN KEY REFERENCES podstawowe_dane(id_podstawowe_dane)
+  id_podstawowe_dane INTEGER
 );
 CREATE TABLE umundurowanie (
   id_umundurowanie INTEGER PRIMARY KEY,
-  id_opiekunka INTEGER FOREIGN KEY REFERENCES opiekunka(id_opiekunka),
-  id_harcerka INTEGER FOREIGN KEY REFERENCES harcerka(id_harcerka),
+  id_opiekunka INTEGER,
+  id_harcerka INTEGER,
   stopien_umundurowania VARCHAR(20) NOT NULL,
   chusta VARCHAR(20) NOT NULL
 );
@@ -48,14 +48,14 @@ CREATE TABLE funkcja (
 );
 
 CREATE TABLE osoba_funkcyjna (
-  id_funkcja INTEGER FOREIGN KEY REFERENCES funkcja(id_funkcja),
-  id_harcerka INTEGER FOREIGN KEY REFERENCES harcerka(id_harcerka)
+  id_funkcja INTEGER,
+  id_harcerka INTEGER
 );
 
 
 CREATE TABLE rodzice (
   id_rodzice INTEGER PRIMARY KEY,
-  id_adres INTEGER FOREIGN KEY REFERENCES adres(id_adres),
+  id_adres INTEGER,
   imie_matki VARCHAR(10) NOT NULL,
   imie_ojca varchar(10) NOT NULL,
   numer decimal(9),
@@ -63,8 +63,8 @@ CREATE TABLE rodzice (
 );
 
 CREATE TABLE rodzice_harcerki (
-  id_harcerka INTEGER FOREIGN KEY REFERENCES harcerka(id_harcerka),
-  id_rodzice INTEGER FOREIGN KEY REFERENCES rodzice(id_rodzice)
+  id_harcerka INTEGER,
+  id_rodzice INTEGER
 );
 
 CREATE TABLE stopien_harcerski (
@@ -78,8 +78,8 @@ CREATE TABLE stopien_harcerski (
 );
 
 CREATE TABLE stopnie_harcerki (
-  id_harcerka INTEGER FOREIGN KEY REFERENCES harcerka(id_harcerka),
-  id_stopien_harcerski INTEGER FOREIGN KEY REFERENCES stopien_harcerski(id_stopien_harcerski)
+  id_harcerka INTEGER,
+  id_stopien_harcerski INTEGER
 );
 CREATE TABLE zastep (
   id_zastep INTEGER PRIMARY KEY,
@@ -90,8 +90,8 @@ CREATE TABLE zastep (
 );
 
 CREATE TABLE zastep_harcerki (
-  id_harcerka INTEGER FOREIGN KEY REFERENCES harcerka(id_harcerka),
-  id_zastep INTEGER FOREIGN KEY REFERENCES zastep(id_zastep)
+  id_harcerka INTEGER,
+  id_zastep INTEGER
 );
 
 /*
