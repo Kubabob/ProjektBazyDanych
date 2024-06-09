@@ -243,6 +243,57 @@ insert into zastep_harcerki(id_harcerka, id_zastep) values (32, 5);
 insert into zastep_harcerki(id_harcerka, id_zastep) values (33, 5);
 
 
+insert into osoba_funkcyjna(id_funkcja, id_harcerka, id_zastep) values (1, 2, 1);
+insert into osoba_funkcyjna(id_funkcja, id_harcerka, id_zastep) values (1, 10, 2);
+insert into osoba_funkcyjna(id_funkcja, id_harcerka, id_zastep) values (1, 18, 3);
+insert into osoba_funkcyjna(id_funkcja, id_harcerka, id_zastep) values (1, 24, 4);
+insert into osoba_funkcyjna(id_funkcja, id_harcerka, id_zastep) values (2, 4, 1);
+insert into osoba_funkcyjna(id_funkcja, id_harcerka, id_zastep) values (2, 9, 2);
+insert into osoba_funkcyjna(id_funkcja, id_harcerka, id_zastep) values (2, 13, 2);
+insert into osoba_funkcyjna(id_funkcja, id_harcerka, id_zastep) values (2, 19, 3);
+insert into osoba_funkcyjna(id_funkcja, id_harcerka, id_zastep) values (2, 25, 4);
+insert into osoba_funkcyjna(id_funkcja, id_harcerka, id_zastep) values (3, 32, 5);
+insert into osoba_funkcyjna(id_funkcja, id_harcerka, id_zastep) values (3, 33, 5);
+
+insert into chusta(id_chusta, barwy) values (1, 'czarna');
+insert into chusta(id_chusta, barwy) values (2, 'obrzędowa');
+
+insert into stopnie_harcerki(id_harcerka, id_stopien_harcerski, data_rozpoczecia) values (1, 2, '2023-12-30 00:00:00');
+insert into stopnie_harcerki(id_harcerka, id_stopien_harcerski, data_rozpoczecia) values (2, 4, '2023-09-17 00:00:00');
+insert into stopnie_harcerki(id_harcerka, id_stopien_harcerski, data_rozpoczecia) values (3, 2, '2023-09-17 00:00:00');
+insert into stopnie_harcerki(id_harcerka, id_stopien_harcerski, data_rozpoczecia) values (4, 4, '2023-09-23 00:00:00');
+insert into stopnie_harcerki(id_harcerka, id_stopien_harcerski, data_rozpoczecia) values (5, 1, '2023-11-11 00:00:00');
+insert into stopnie_harcerki(id_harcerka, id_stopien_harcerski, data_rozpoczecia) values (6, 1, '2023-12-16 00:00:00');
+insert into stopnie_harcerki(id_harcerka, id_stopien_harcerski, data_rozpoczecia) values (7, 2, '2023-08-29 00:00:00');
+insert into stopnie_harcerki(id_harcerka, id_stopien_harcerski, data_rozpoczecia, data_zakonczenia) values (8, 2, '2023-06-15 00:00:00', '2024-06-10 00:00:00');
+insert into stopnie_harcerki(id_harcerka, id_stopien_harcerski, data_rozpoczecia) values (9, 4, '2023-12-30 00:00:00');
+insert into stopnie_harcerki(id_harcerka, id_stopien_harcerski, data_rozpoczecia) values (10, 4, '2024-03-21 00:00:00');
+insert into stopnie_harcerki(id_harcerka, id_stopien_harcerski, data_rozpoczecia, data_zakonczenia) values (11, 2, '2023-06-15 00:00:00', '2024-06-10 00:00:00');
+insert into stopnie_harcerki(id_harcerka, id_stopien_harcerski, data_rozpoczecia, data_zakonczenia) values (12, 2, '2023-12-30 00:00:00', '2024-06-10 00:00:00');
+insert into stopnie_harcerki(id_harcerka, id_stopien_harcerski, data_rozpoczecia) values (13, 4, '2024-02-02 00:00:00');
+insert into stopnie_harcerki(id_harcerka, id_stopien_harcerski, data_rozpoczecia) values (14, 3, '2024-04-04 00:00:00');
+insert into stopnie_harcerki(id_harcerka, id_stopien_harcerski, data_rozpoczecia) values (15, 1, '2022-05-05 00:00:00');
+insert into stopnie_harcerki(id_harcerka, id_stopien_harcerski, data_rozpoczecia) values (16, 1, '2023-06-06 00:00:00');
+insert into stopnie_harcerki(id_harcerka, id_stopien_harcerski, data_rozpoczecia) values (17, 1, '2023-06-06 00:00:00');
+insert into stopnie_harcerki(id_harcerka, id_stopien_harcerski, data_rozpoczecia) values (18, 4, '2024-01-01 00:00:00');
+insert into stopnie_harcerki(id_harcerka, id_stopien_harcerski, data_rozpoczecia) values (19, 3, '2024-02-02 00:00:00');
+insert into stopnie_harcerki(id_harcerka, id_stopien_harcerski, data_rozpoczecia) values (20, 3, '2024-02-02 00:00:00');
+insert into stopnie_harcerki(id_harcerka, id_stopien_harcerski, data_rozpoczecia) values (21, 1, '2023-11-11 00:00:00');
+insert into stopnie_harcerki(id_harcerka, id_stopien_harcerski, data_rozpoczecia) values (22, 3, '2024-04-21 00:00:00');
+insert into stopnie_harcerki(id_harcerka, id_stopien_harcerski, data_rozpoczecia) values (23, 1, '2024-04-10 00:00:00');
+insert into stopnie_harcerki(id_harcerka, id_stopien_harcerski, data_rozpoczecia, data_zakonczenia) values (24, 3, '2022-04-13 00:00:00', '2024-07-15 00:00:00');
+insert into stopnie_harcerki(id_harcerka, id_stopien_harcerski, data_rozpoczecia) values (25, 4, '2022-02-02 00:00:00');
+insert into stopnie_harcerki(id_harcerka, id_stopien_harcerski, data_rozpoczecia) values (26, 3, '2024-03-03 00:00:00');
+insert into stopnie_harcerki(id_harcerka, id_stopien_harcerski, data_rozpoczecia) values (27, 1, '2024-04-10 00:00:00');
+insert into stopnie_harcerki(id_harcerka, id_stopien_harcerski, data_rozpoczecia) values (28, 1, '2023-09-09 00:00:00');
+insert into stopnie_harcerki(id_harcerka, id_stopien_harcerski, data_rozpoczecia) values (29, 1, '2023-09-09 00:00:00');
+insert into stopnie_harcerki(id_harcerka, id_stopien_harcerski, data_rozpoczecia) values (30, 1, '2023-12-16 00:00:00');
+insert into stopnie_harcerki(id_harcerka, id_stopien_harcerski, data_rozpoczecia) values (31, 1, '2023-12-16 00:00:00');
+insert into stopnie_harcerki(id_harcerka, id_stopien_harcerski, data_rozpoczecia, data_zakonczenia) values (32, 5, '2023-07-13 00:00:00', '2024-05-19 00:00:00');
+insert into stopnie_harcerki(id_harcerka, id_stopien_harcerski, data_rozpoczecia, data_zakonczenia) values (33, 5, '2023-07-13 00:00:00', '2024-05-19 00:00:00');
+
+
+
 /*
 ALTER TABLE adres 
     CHECK CONSTRAINT ALL;
