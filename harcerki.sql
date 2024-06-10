@@ -16,8 +16,8 @@ SELECT * from zastep_harcerki;
 select * from osoba_funkcyjna;
 select * from chusta;
 select * from stopnie_harcerki;
-
-/*
 select * from opiekunka;
 select * from chusta_harcerki;
+
+/*
 */

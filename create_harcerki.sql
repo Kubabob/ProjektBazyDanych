@@ -23,7 +23,9 @@ CREATE TABLE podstawowe_dane (
 );
 CREATE TABLE opiekunka (
   id_opiekunka INTEGER PRIMARY KEY,
-  id_podstawowe_dane INTEGER
+  id_podstawowe_dane INTEGER,
+  imie VARCHAR(10) NOT NULL,
+  nazwisko VARCHAR(15) NOT NULL
 );
 CREATE TABLE harcerka (
   id_harcerka INTEGER PRIMARY KEY,

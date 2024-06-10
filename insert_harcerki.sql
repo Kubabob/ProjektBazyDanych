@@ -293,6 +293,41 @@ insert into stopnie_harcerki(id_harcerka, id_stopien_harcerski, data_rozpoczecia
 insert into stopnie_harcerki(id_harcerka, id_stopien_harcerski, data_rozpoczecia, data_zakonczenia) values (33, 5, '2023-07-13 00:00:00', '2024-05-19 00:00:00');
 
 
+insert into opiekunka(id_opiekunka, id_podstawowe_dane, imie, nazwisko) values (1, NULL, 'Alicja', 'Hyży')
+insert into opiekunka(id_opiekunka, id_podstawowe_dane, imie, nazwisko) values (2, NULL, 'Paulina', 'Blok')
+insert into opiekunka(id_opiekunka, id_podstawowe_dane, imie, nazwisko) values (3, 32, 'Dorota', 'Pawlak')
+insert into opiekunka(id_opiekunka, id_podstawowe_dane, imie, nazwisko) values (4, 10, 'Basia', 'Splitt')
+insert into opiekunka(id_opiekunka, id_podstawowe_dane, imie, nazwisko) values (5, 13, 'Martyna', 'Sendacka')
+insert into opiekunka(id_opiekunka, id_podstawowe_dane, imie, nazwisko) values (6, NULL, 'Marta', 'Dylewska')
+insert into opiekunka(id_opiekunka, id_podstawowe_dane, imie, nazwisko) values (7, 2, 'Tosia', 'Rudzka')
+insert into opiekunka(id_opiekunka, id_podstawowe_dane, imie, nazwisko) values (8, NULL, 'Ola', 'Śmieszek')
+insert into opiekunka(id_opiekunka, id_podstawowe_dane, imie, nazwisko) values (9, 18, 'Nicole', 'Pospieszyńska')
+insert into opiekunka(id_opiekunka, id_podstawowe_dane, imie, nazwisko) values (10, NULL, 'Agnieszka', 'Frankowska')
+insert into opiekunka(id_opiekunka, id_podstawowe_dane, imie, nazwisko) values (11, NULL, 'Emilia', 'Hyży')
+
+insert into chusta_harcerki(id_chusta, id_harcerka, id_opiekunka, data_przyznania) values (2, 10, 1, '2019-09-09 00:00:00')
+insert into chusta_harcerki(id_chusta, id_harcerka, id_opiekunka, data_przyznania) values (2, 9, 2, '2021-02-02 00:00:00')
+insert into chusta_harcerki(id_chusta, id_harcerka, id_opiekunka, data_przyznania) values (2, 11, 2, '2023-07-07 00:00:00')
+insert into chusta_harcerki(id_chusta, id_harcerka, id_opiekunka, data_przyznania) values (2, 8, 3, '2023-07-07 00:00:00')
+insert into chusta_harcerki(id_chusta, id_harcerka, id_opiekunka, data_przyznania) values (2, 14, 4, '2023-12-30 00:00:00')
+insert into chusta_harcerki(id_chusta, id_harcerka, id_opiekunka, data_przyznania) values (2, 12, 5, '2023-12-30 00:00:00')
+insert into chusta_harcerki(id_chusta, id_harcerka, id_opiekunka, data_przyznania) values (2, 2, 6, '2022-07-07 00:00:00')
+insert into chusta_harcerki(id_chusta, id_harcerka, id_opiekunka, data_przyznania) values (2, 4, 7, '2023-07-07 00:00:00')
+insert into chusta_harcerki(id_chusta, id_harcerka, id_opiekunka, data_przyznania) values (2, 3, 7, '2023-09-17 00:00:00')
+insert into chusta_harcerki(id_chusta, id_harcerka, id_opiekunka, data_przyznania) values (2, 7, 5, '2023-08-29 00:00:00')
+insert into chusta_harcerki(id_chusta, id_harcerka, id_opiekunka, data_przyznania) values (2, 18, 8, '2019-12-12 00:00:00')
+insert into chusta_harcerki(id_chusta, id_harcerka, id_opiekunka, data_przyznania) values (2, 19, 9, '2023-08-29 00:00:00')
+insert into chusta_harcerki(id_chusta, id_harcerka, id_opiekunka, data_przyznania) values (2, 20, 9, '2023-09-17 00:00:00')
+insert into chusta_harcerki(id_chusta, id_harcerka, id_opiekunka, data_przyznania) values (2, 24, 9, '2022-07-07 00:00:00')
+insert into chusta_harcerki(id_chusta, id_harcerka, id_opiekunka, data_przyznania) values (2, 25, 2, '2021-02-02 00:00:00')
+insert into chusta_harcerki(id_chusta, id_harcerka, id_opiekunka, data_przyznania) values (2, 26, 10, '2023-09-09 00:00:00')
+insert into chusta_harcerki(id_chusta, id_harcerka, id_opiekunka, data_przyznania) values (2, 32, 9, '2022-07-07 00:00:00')
+insert into chusta_harcerki(id_chusta, id_harcerka, id_opiekunka, data_przyznania) values (2, 33, 11, '2018-12-12 00:00:00')
+insert into chusta_harcerki(id_chusta, id_harcerka, id_opiekunka, data_przyznania) values (2, 22, 9, '2023-12-30 00:00:00')
+insert into chusta_harcerki(id_chusta, id_harcerka, id_opiekunka, data_przyznania) values (2, 1, 7, '2023-12-30 00:00:00')
+insert into chusta_harcerki(id_chusta, id_harcerka, id_opiekunka, data_przyznania) values (1, 23, NULL, '2024-04-10 00:00:00')
+insert into chusta_harcerki(id_chusta, id_harcerka, id_opiekunka, data_przyznania) values (1, 27, NULL, '2024-04-10 00:00:00')
+
 
 /*
 ALTER TABLE adres 
