@@ -32,39 +32,39 @@ insert into adres(id_adres, ulica, numer, kod, miejscowosc) values (23, 'Nadmors
 insert into adres(id_adres, ulica, numer, kod, miejscowosc) values (24, 'Modrzewiowa', '28', '81-198', 'Mosty');
 insert into adres(id_adres, ulica, numer, kod, miejscowosc) values (25, 'Paprykowa', '35/2', '81-198', 'Dębogórze');
 
-insert into podstawowe_dane(id_podstawowe_dane, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (1, 1, 'Ania', 'Pawlak', '13303102029', '31-10-2013');
-insert into podstawowe_dane(id_podstawowe_dane, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (2, 2, 'Tosia', 'Rudzka', '10211907067', '19-01-2010');
-insert into podstawowe_dane(id_podstawowe_dane, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (3, 3, 'Dorota', 'Guza', '10270606246', '06-07-2010');
-insert into podstawowe_dane(id_podstawowe_dane, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (4, 4, 'Ania', 'Żukowska', '10220700907', '07-02-2010');
-insert into podstawowe_dane(id_podstawowe_dane, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (5, 5, 'Oliwia', 'Junko', '10220103489', '01-02-2010');
-insert into podstawowe_dane(id_podstawowe_dane, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (6, 5, 'Patrycja ', 'Junko', '12251300486', '13-05-2012');
-insert into podstawowe_dane(id_podstawowe_dane, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (7, 6, 'Maja', 'Princ', '10230903226', '09-03-2010');
-insert into podstawowe_dane(id_podstawowe_dane, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (8, 7, 'Joanna', 'Kochańska', '13302605363', '26-10-2013');
-insert into podstawowe_dane(id_podstawowe_dane, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (9, 7, 'Anieszka', 'Kochańska', '09222404223', '24-02-2009');
-insert into podstawowe_dane(id_podstawowe_dane, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (10, 8, 'Barbara', 'Splitt', '08300305988', '03-10-2008');
-insert into podstawowe_dane(id_podstawowe_dane, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (11, 8, 'Aniela', 'Splitt', '13222508740', '25-02-2013');
-insert into podstawowe_dane(id_podstawowe_dane, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (12, 9, 'Oriana', 'Sendacka', '13311100624', '11-11-2013');
-insert into podstawowe_dane(id_podstawowe_dane, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (13, 9, 'Martyna ', 'Sendacka', '10212707642', '27-01-2010');
-insert into podstawowe_dane(id_podstawowe_dane, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (14, 10, 'Oliwia', 'Krause', '10252000381', '20-05-2010');
-insert into podstawowe_dane(id_podstawowe_dane, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (15, 11, 'Anastazja ', 'Pawłowska', '09310902008', '09-11-2009');
-insert into podstawowe_dane(id_podstawowe_dane, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (16, 11, 'Marta', 'Pawłowska', '12220308208', '03-02-2012');
-insert into podstawowe_dane(id_podstawowe_dane, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (17, 12, 'Julia', 'Gołata', '11251901765', '19-05-2011');
-insert into podstawowe_dane(id_podstawowe_dane, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (18, 13, 'Nicole', 'Pospieszyńska', '09290209841', '02-09-2009');
-insert into podstawowe_dane(id_podstawowe_dane, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (19, 14, 'Amelia', 'Owerczuk', '09213009907', '30-01-2009');
-insert into podstawowe_dane(id_podstawowe_dane, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (20, 14, 'Zuzanna', 'Owerczuk', '10281809847', '18-08-2010');
-insert into podstawowe_dane(id_podstawowe_dane, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (21, 15, 'Helena', 'Woroniecka', '11282209742', '22-08-2011');
-insert into podstawowe_dane(id_podstawowe_dane, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (22, 16, 'Magdalena', 'Antonowicz', '10262910302', '29-06-2010');
-insert into podstawowe_dane(id_podstawowe_dane, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (23, 17, 'Zofia', 'Budny', '12210905848', '09-01-2021');
-insert into podstawowe_dane(id_podstawowe_dane, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (24, 18, 'Weronika', 'Czarnecka', '09242908361', '29-04-2009');
-insert into podstawowe_dane(id_podstawowe_dane, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (25, 19, 'Martyna', 'Tyńska', '09252305107', '23-05-2009');
-insert into podstawowe_dane(id_podstawowe_dane, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (26, 20, 'Alicja', 'Żychska', '11251800729', '18-05-2011');
-insert into podstawowe_dane(id_podstawowe_dane, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (27, 21, 'Klaudia', 'Żak', '10242002382', '20-04-2010');
-insert into podstawowe_dane(id_podstawowe_dane, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (28, 22, 'Kalina', 'Żakowska', '12302006228', '20-10-2012');
-insert into podstawowe_dane(id_podstawowe_dane, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (29, 23, 'Lena', 'Kukiełka', '11302507586', '25-10-2011');
-insert into podstawowe_dane(id_podstawowe_dane, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (30, 24, 'Joanna', 'Radaszewska', '13241806704', '18-04-2013');
-insert into podstawowe_dane(id_podstawowe_dane, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (31, 25, 'Ewa', 'Czyżewska', '13272904985', '29-07-2013');
-insert into podstawowe_dane(id_podstawowe_dane, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (32, 1, 'Dorota', 'Pawlak', '07262602720', '26-06-2007');
-insert into podstawowe_dane(id_podstawowe_dane, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (33, 8, 'Marysia', 'Splitt', '07210301701', '03-01-2007');
+insert into harcerka(id_harcerka, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (1, 1, 'Ania', 'Pawlak', '13303102029', '31-10-2013');
+insert into harcerka(id_harcerka, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (2, 2, 'Tosia', 'Rudzka', '10211907067', '19-01-2010');
+insert into harcerka(id_harcerka, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (3, 3, 'Dorota', 'Guza', '10270606246', '06-07-2010');
+insert into harcerka(id_harcerka, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (4, 4, 'Ania', 'Żukowska', '10220700907', '07-02-2010');
+insert into harcerka(id_harcerka, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (5, 5, 'Oliwia', 'Junko', '10220103489', '01-02-2010');
+insert into harcerka(id_harcerka, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (6, 5, 'Patrycja ', 'Junko', '12251300486', '13-05-2012');
+insert into harcerka(id_harcerka, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (7, 6, 'Maja', 'Princ', '10230903226', '09-03-2010');
+insert into harcerka(id_harcerka, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (8, 7, 'Joanna', 'Kochańska', '13302605363', '26-10-2013');
+insert into harcerka(id_harcerka, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (9, 7, 'Anieszka', 'Kochańska', '09222404223', '24-02-2009');
+insert into harcerka(id_harcerka, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (10, 8, 'Basia', 'Splitt', '08300305988', '03-10-2008');
+insert into harcerka(id_harcerka, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (11, 8, 'Aniela', 'Splitt', '13222508740', '25-02-2013');
+insert into harcerka(id_harcerka, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (12, 9, 'Oriana', 'Sendacka', '13311100624', '11-11-2013');
+insert into harcerka(id_harcerka, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (13, 9, 'Martyna', 'Sendacka', '10212707642', '27-01-2010');
+insert into harcerka(id_harcerka, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (14, 10, 'Oliwia', 'Krause', '10252000381', '20-05-2010');
+insert into harcerka(id_harcerka, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (15, 11, 'Anastazja ', 'Pawłowska', '09310902008', '09-11-2009');
+insert into harcerka(id_harcerka, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (16, 11, 'Marta', 'Pawłowska', '12220308208', '03-02-2012');
+insert into harcerka(id_harcerka, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (17, 12, 'Julia', 'Gołata', '11251901765', '19-05-2011');
+insert into harcerka(id_harcerka, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (18, 13, 'Nicole', 'Pospieszyńska', '09290209841', '02-09-2009');
+insert into harcerka(id_harcerka, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (19, 14, 'Amelia', 'Owerczuk', '09213009907', '30-01-2009');
+insert into harcerka(id_harcerka, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (20, 14, 'Zuzanna', 'Owerczuk', '10281809847', '18-08-2010');
+insert into harcerka(id_harcerka, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (21, 15, 'Helena', 'Woroniecka', '11282209742', '22-08-2011');
+insert into harcerka(id_harcerka, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (22, 16, 'Magdalena', 'Antonowicz', '10262910302', '29-06-2010');
+insert into harcerka(id_harcerka, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (23, 17, 'Zofia', 'Budny', '12210905848', '09-01-2021');
+insert into harcerka(id_harcerka, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (24, 18, 'Weronika', 'Czarnecka', '09242908361', '29-04-2009');
+insert into harcerka(id_harcerka, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (25, 19, 'Martyna', 'Tyńska', '09252305107', '23-05-2009');
+insert into harcerka(id_harcerka, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (26, 20, 'Alicja', 'Żychska', '11251800729', '18-05-2011');
+insert into harcerka(id_harcerka, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (27, 21, 'Klaudia', 'Żak', '10242002382', '20-04-2010');
+insert into harcerka(id_harcerka, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (28, 22, 'Kalina', 'Żakowska', '12302006228', '20-10-2012');
+insert into harcerka(id_harcerka, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (29, 23, 'Lena', 'Kukiełka', '11302507586', '25-10-2011');
+insert into harcerka(id_harcerka, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (30, 24, 'Joanna', 'Radaszewska', '13241806704', '18-04-2013');
+insert into harcerka(id_harcerka, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (31, 25, 'Ewa', 'Czyżewska', '13272904985', '29-07-2013');
+insert into harcerka(id_harcerka, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (32, 1, 'Dorota', 'Pawlak', '07262602720', '26-06-2007');
+insert into harcerka(id_harcerka, id_adres, imie, nazwisko, PESEL, data_urodzenia) values (33, 8, 'Marysia', 'Splitt', '07210301701', '03-01-2007');
 
 insert into rodzice(id_rodzice, id_adres, imie_matki, imie_ojca, numer_matki, numer_ojca, mail) values (1, 1, 'Barbara', 'Robert', '503382546', '501398277', 'basiap224@wp.pl');
 insert into rodzice(id_rodzice, id_adres, imie_matki, imie_ojca, numer_matki, numer_ojca, mail) values (2, 2, 'Ewa', 'Tomasz', '503128205', '533454908', 'ewarudzka37@gmail.com');
@@ -124,41 +124,6 @@ insert into zastep(id_zastep, nazwa, ilosc_osob) values (2, 'Leśne Dzwonki', '1
 insert into zastep(id_zastep, nazwa, ilosc_osob) values (3, 'Irysy', '6');
 insert into zastep(id_zastep, nazwa, ilosc_osob) values (4, 'Stominajki', '8');
 insert into zastep(id_zastep, nazwa, ilosc_osob) values (5, 'kadra', '2');
-
-
-insert into harcerka(id_harcerka, id_podstawowe_dane) values (1, 1);
-insert into harcerka(id_harcerka, id_podstawowe_dane) values (2, 2);
-insert into harcerka(id_harcerka, id_podstawowe_dane) values (3, 3);
-insert into harcerka(id_harcerka, id_podstawowe_dane) values (4, 4);
-insert into harcerka(id_harcerka, id_podstawowe_dane) values (5, 5);
-insert into harcerka(id_harcerka, id_podstawowe_dane) values (6, 6);
-insert into harcerka(id_harcerka, id_podstawowe_dane) values (7, 7);
-insert into harcerka(id_harcerka, id_podstawowe_dane) values (8, 8);
-insert into harcerka(id_harcerka, id_podstawowe_dane) values (9, 9);
-insert into harcerka(id_harcerka, id_podstawowe_dane) values (10, 10);
-insert into harcerka(id_harcerka, id_podstawowe_dane) values (11, 11);
-insert into harcerka(id_harcerka, id_podstawowe_dane) values (12, 12);
-insert into harcerka(id_harcerka, id_podstawowe_dane) values (13, 13);
-insert into harcerka(id_harcerka, id_podstawowe_dane) values (14, 14);
-insert into harcerka(id_harcerka, id_podstawowe_dane) values (15, 15);
-insert into harcerka(id_harcerka, id_podstawowe_dane) values (16, 16);
-insert into harcerka(id_harcerka, id_podstawowe_dane) values (17, 17);
-insert into harcerka(id_harcerka, id_podstawowe_dane) values (18, 18);
-insert into harcerka(id_harcerka, id_podstawowe_dane) values (19, 19);
-insert into harcerka(id_harcerka, id_podstawowe_dane) values (20, 20);
-insert into harcerka(id_harcerka, id_podstawowe_dane) values (21, 21);
-insert into harcerka(id_harcerka, id_podstawowe_dane) values (22, 22);
-insert into harcerka(id_harcerka, id_podstawowe_dane) values (23, 23);
-insert into harcerka(id_harcerka, id_podstawowe_dane) values (24, 24);
-insert into harcerka(id_harcerka, id_podstawowe_dane) values (25, 25);
-insert into harcerka(id_harcerka, id_podstawowe_dane) values (26, 26);
-insert into harcerka(id_harcerka, id_podstawowe_dane) values (27, 27);
-insert into harcerka(id_harcerka, id_podstawowe_dane) values (28, 28);
-insert into harcerka(id_harcerka, id_podstawowe_dane) values (29, 29);
-insert into harcerka(id_harcerka, id_podstawowe_dane) values (30, 30);
-insert into harcerka(id_harcerka, id_podstawowe_dane) values (31, 31);
-insert into harcerka(id_harcerka, id_podstawowe_dane) values (32, 32);
-insert into harcerka(id_harcerka, id_podstawowe_dane) values (33, 33);
 
 
 insert into funkcja(id_funkcja, nazwa, opis) values (1, 'zastępowa', 'brązowy sznur, prowadzi zastęp');
@@ -293,17 +258,17 @@ insert into stopnie_harcerki(id_harcerka, id_stopien_harcerski, data_rozpoczecia
 insert into stopnie_harcerki(id_harcerka, id_stopien_harcerski, data_rozpoczecia, data_zakonczenia) values (33, 5, '2023-07-13 00:00:00', '2024-05-19 00:00:00');
 
 
-insert into opiekunka(id_opiekunka, id_podstawowe_dane, imie, nazwisko) values (1, NULL, 'Alicja', 'Hyży')
-insert into opiekunka(id_opiekunka, id_podstawowe_dane, imie, nazwisko) values (2, NULL, 'Paulina', 'Blok')
-insert into opiekunka(id_opiekunka, id_podstawowe_dane, imie, nazwisko) values (3, 32, 'Dorota', 'Pawlak')
-insert into opiekunka(id_opiekunka, id_podstawowe_dane, imie, nazwisko) values (4, 10, 'Basia', 'Splitt')
-insert into opiekunka(id_opiekunka, id_podstawowe_dane, imie, nazwisko) values (5, 13, 'Martyna', 'Sendacka')
-insert into opiekunka(id_opiekunka, id_podstawowe_dane, imie, nazwisko) values (6, NULL, 'Marta', 'Dylewska')
-insert into opiekunka(id_opiekunka, id_podstawowe_dane, imie, nazwisko) values (7, 2, 'Tosia', 'Rudzka')
-insert into opiekunka(id_opiekunka, id_podstawowe_dane, imie, nazwisko) values (8, NULL, 'Ola', 'Śmieszek')
-insert into opiekunka(id_opiekunka, id_podstawowe_dane, imie, nazwisko) values (9, 18, 'Nicole', 'Pospieszyńska')
-insert into opiekunka(id_opiekunka, id_podstawowe_dane, imie, nazwisko) values (10, NULL, 'Agnieszka', 'Frankowska')
-insert into opiekunka(id_opiekunka, id_podstawowe_dane, imie, nazwisko) values (11, NULL, 'Emilia', 'Hyży')
+insert into opiekunka(id_opiekunka, id_harcerka, imie, nazwisko) values (1, NULL, 'Alicja', 'Hyży')
+insert into opiekunka(id_opiekunka, id_harcerka, imie, nazwisko) values (2, NULL, 'Paulina', 'Blok')
+insert into opiekunka(id_opiekunka, id_harcerka, imie, nazwisko) values (3, 32, 'Dorota', 'Pawlak')
+insert into opiekunka(id_opiekunka, id_harcerka, imie, nazwisko) values (4, 10, 'Basia', 'Splitt')
+insert into opiekunka(id_opiekunka, id_harcerka, imie, nazwisko) values (5, 13, 'Martyna', 'Sendacka')
+insert into opiekunka(id_opiekunka, id_harcerka, imie, nazwisko) values (6, NULL, 'Marta', 'Dylewska')
+insert into opiekunka(id_opiekunka, id_harcerka, imie, nazwisko) values (7, 2, 'Tosia', 'Rudzka')
+insert into opiekunka(id_opiekunka, id_harcerka, imie, nazwisko) values (8, NULL, 'Ola', 'Śmieszek')
+insert into opiekunka(id_opiekunka, id_harcerka, imie, nazwisko) values (9, 18, 'Nicole', 'Pospieszyńska')
+insert into opiekunka(id_opiekunka, id_harcerka, imie, nazwisko) values (10, NULL, 'Agnieszka', 'Frankowska')
+insert into opiekunka(id_opiekunka, id_harcerka, imie, nazwisko) values (11, NULL, 'Emilia', 'Hyży')
 
 insert into chusta_harcerki(id_chusta, id_harcerka, id_opiekunka, data_przyznania) values (2, 10, 1, '2019-09-09 00:00:00')
 insert into chusta_harcerki(id_chusta, id_harcerka, id_opiekunka, data_przyznania) values (2, 9, 2, '2021-02-02 00:00:00')

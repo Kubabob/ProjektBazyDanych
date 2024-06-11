@@ -14,6 +14,7 @@ SELECT * from podstawowe_dane;
 SELECT * FROM rodzice;
 SELECT * from zastepy_szkoly;
 SELECT * from szkola;
+SELECT * from zastep_harcerki;
 SELECT * from zastep;
 SELECT * from harcerka;
 select * from funkcja;
@@ -25,4 +26,7 @@ select * from chusta;
 select * from stopnie_harcerki;
 select * from opiekunka;
 select * from chusta_harcerki;
+
+
+/*
 */

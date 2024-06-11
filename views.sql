@@ -7,3 +7,8 @@ CREATE VIEW stopnie_harcerek
     join podstawowe_dane as pd on pd.id_podstawowe_dane = harcerka.id_podstawowe_dane;
 
 --use harcerki;
+-- 3 widoki
+CREATE VIEW [Zastępy] AS
+SELECT CustomerName, ContactName
+FROM Customers
+WHERE Country = 'Brazil';

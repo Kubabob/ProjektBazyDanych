@@ -1,6 +1,6 @@
 SET DATEFORMAT dmy;
 
-use harcerki
+use harcerki;
 
 CREATE TABLE adres (
   id_adres INTEGER PRIMARY KEY,
@@ -11,8 +11,8 @@ CREATE TABLE adres (
 );
 
 
-CREATE TABLE podstawowe_dane (
-  id_podstawowe_dane INTEGER PRIMARY KEY,
+CREATE TABLE harcerka (
+  id_harcerka INTEGER PRIMARY KEY,
   id_adres INTEGER NOT NULL,
   imie VARCHAR(10) NOT NULL,
   nazwisko VARCHAR(15) NOT NULL,
@@ -23,13 +23,9 @@ CREATE TABLE podstawowe_dane (
 );
 CREATE TABLE opiekunka (
   id_opiekunka INTEGER PRIMARY KEY,
-  id_podstawowe_dane INTEGER,
+  id_harcerka INTEGER,
   imie VARCHAR(10) NOT NULL,
   nazwisko VARCHAR(15) NOT NULL
-);
-CREATE TABLE harcerka (
-  id_harcerka INTEGER PRIMARY KEY,
-  id_podstawowe_dane INTEGER
 );
 CREATE TABLE chusta (
   id_chusta INTEGER PRIMARY KEY,
