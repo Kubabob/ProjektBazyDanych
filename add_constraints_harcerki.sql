@@ -1,3 +1,5 @@
+use harcerki;
+
 ALTER TABLE rodzice
 add CONSTRAINT FK_id_adress_rodzice
 FOREIGN KEY (id_adres) REFERENCES adres(id_adres);
@@ -13,7 +15,7 @@ FOREIGN KEY (id_rodzice) REFERENCES rodzice(id_rodzice);
 
 ALTER TABLE harcerka
 add CONSTRAINT FK_id_podstawowe_dane_harcerka
-FOREIGN KEY (id_podstawowe_dane) REFERENCES harcerka(id_podstawowe_dane);
+FOREIGN KEY (id_podstawowe_dane) REFERENCES podstawowe_dane(id_podstawowe_dane);
 
 
 ALTER TABLE podstawowe_dane
