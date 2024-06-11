@@ -25,16 +25,16 @@ FOREIGN KEY (id_adres) REFERENCES adres(id_adres);
 
 ALTER TABLE opiekunka
 add CONSTRAINT FK_id_podstawowe_dane_opiekunka
-FOREIGN KEY (id_podstawowe_dane) REFERENCES podstawowe_dane(id_podstawowe_dane);
+FOREIGN KEY (id_harcerka) REFERENCES harcerka(id_harcerka);
 
-
+/*
 ALTER TABLE umundurowanie
 add CONSTRAINT FK_id_opiekunka_umundurowanie
 FOREIGN KEY (id_opiekunka) REFERENCES opiekunka(id_opiekunka);
 ALTER TABLE umundurowanie
 add CONSTRAINT FK_id_harcerka_umundurowanie
 FOREIGN KEY (id_harcerka) REFERENCES harcerka(id_harcerka);
-
+*/
 
 ALTER TABLE zastep_harcerki
 add CONSTRAINT FK_id_harcerka_zastep_harcerki
