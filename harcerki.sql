@@ -2,6 +2,10 @@ if DB_ID('harcerki') is not null
     use harcerki;
 
 
+select * from pokaz_rodzenstwa()
+ORDER by wielkosc_rodzenstwa desc;
+
+
 SELECT * from opiekunki_spoza_bazy;
 
 

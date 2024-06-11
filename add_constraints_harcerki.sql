@@ -60,14 +60,14 @@ ALTER TABLE osoba_funkcyjna
 add CONSTRAINT FK_id_zastep_osoba_funkcyjna
 FOREIGN KEY (id_zastep) REFERENCES zastep(id_zastep);
 
-ALTER TABLE chusta
-add CONSTRAINT FK_id_chusta_chusta
+ALTER TABLE chusta_harcerki
+add CONSTRAINT FK_id_chusta_chusta_harcerki
 FOREIGN KEY (id_chusta) REFERENCES chusta(id_chusta);
-ALTER TABLE chusta
-add CONSTRAINT FK_id_harcerka_chusta
+ALTER TABLE chusta_harcerki
+add CONSTRAINT FK_id_harcerka_chusta_harcerki
 FOREIGN KEY (id_harcerka) REFERENCES harcerka(id_harcerka);
-ALTER TABLE chusta
-add CONSTRAINT FK_id_opiekunka_chusta
+ALTER TABLE chusta_harcerki
+add CONSTRAINT FK_id_opiekunka_chusta_harcerki
 FOREIGN KEY (id_opiekunka) REFERENCES opiekunka(id_opiekunka);
 
 /*
