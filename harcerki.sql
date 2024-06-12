@@ -1,7 +1,11 @@
 if DB_ID('harcerki') is not null
     use harcerki;
 
+drop TABLE skladki;
 
+
+EXEC stworz_tabele_skladek @cena_za_dzien = 10, @ilosc_dni = 10;
+go
 select * from pokaz_rodzenstwa()
 ORDER by wielkosc_rodzenstwa desc;
 
