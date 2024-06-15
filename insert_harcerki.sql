@@ -3,6 +3,9 @@ use harcerki
 
 SET DATEFORMAT dmy;
 
+DECLARE @cena_za_dzien DECIMAL(10,2) = 10;
+DECLARE @ilosc_dni int = 10;
+
 
 insert into adres(id_adres, ulica, numer, kod, miejscowosc) values (1, 'Dedela', '2/1/6', '81-197', 'Gdynia');
 insert into adres(id_adres, ulica, numer, kod, miejscowosc) values (2, 'Czwartaków', '3/23', '81-115', 'Gdynia');
@@ -291,47 +294,6 @@ insert into chusta_harcerki(id_chusta, id_harcerka, id_opiekunka, data_przyznani
 insert into chusta_harcerki(id_chusta, id_harcerka, id_opiekunka, data_przyznania) values (1, 23, NULL, '2024-04-10 00:00:00')
 insert into chusta_harcerki(id_chusta, id_harcerka, id_opiekunka, data_przyznania) values (1, 27, NULL, '2024-04-10 00:00:00')
 
-
-/*
-ALTER TABLE adres 
-    CHECK CONSTRAINT ALL;
-
-ALTER TABLE podstawowe_dane 
-    CHECK CONSTRAINT ALL;
-
-ALTER TABLE funkcja
-    CHECK CONSTRAINT ALL;
-
-ALTER TABLE osoba_funkcyjna
-    CHECK CONSTRAINT ALL; 
-
-ALTER TABLE stopien_harcerski
-    CHECK CONSTRAINT ALL;
-
-ALTER TABLE stopnie_harcerki
-    CHECK CONSTRAINT ALL;
-
-ALTER TABLE zastep
-    CHECK CONSTRAINT ALL;
-
-ALTER TABLE zastep_harcerki
-    CHECK CONSTRAINT ALL;
-
-ALTER TABLE rodzice
-    CHECK CONSTRAINT ALL;
-
-ALTER TABLE rodzice_harcerki
-    CHECK CONSTRAINT ALL;
-
-ALTER TABLE opiekunka 
-    CHECK CONSTRAINT ALL;
-
-ALTER TABLE harcerka
-    CHECK CONSTRAINT ALL;
-
-ALTER TABLE umundurowanie
-    CHECK CONSTRAINT ALL;
-    */
 
 
 ALTER TABLE rodzice

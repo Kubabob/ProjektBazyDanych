@@ -1,0 +1,187 @@
+use harcerki;
+
+set dateformat dmy;
+
+--imie i nazwisko: Karolina Klemenska i Jakub Bożek
+--temat bazy danych: 13 KDH "Chata"
+
+--1a) tworzenie 3 widoki
+
+--1
+go
+CREATE VIEW stopnie_harcerek
+    as
+    SELECT harcerka.id_harcerka, imie, nazwisko, stopien.id_stopien_harcerski, nazwa as nazwa_stopnia  from stopien_harcerski as stopien
+    inner join stopnie_harcerki as stopnie on stopien.id_stopien_harcerski = stopnie.id_stopien_harcerski
+    inner join harcerka on harcerka.id_harcerka = stopnie.id_harcerka;
+--2
+go
+CREATE VIEW opiekunki_spoza_bazy
+    as
+    SELECT id_opiekunka, imie, nazwisko from opiekunka
+    WHERE id_harcerka is null;
+--3
+go
+CREATE VIEW harcerki_bez_chusty
+    as
+    SELECT * from harcerka h
+    where h.id_harcerka not in (
+    SELECT h.id_harcerka FROM harcerka h
+    join chusta_harcerki c
+    on c.id_harcerka = h.id_harcerka);
+go
+--1b) sprawdzanie 3 widokow
+
+--1
+SELECT * from stopnie_harcerek;
+
+--2
+select * from opiekunki_spoza_bazy;
+
+--3
+SELECT * from harcerki_bez_chusty;
+
+--2a) tworzenie funkcji 1
+
+go
+CREATE FUNCTION pokaz_rodzenstwa ()
+RETURNS TABLE
+as
+RETURN
+    SELECT top(100) percent nazwisko, count(nazwisko) as wielkosc_rodzenstwa from harcerka
+    group by nazwisko
+    HAVING count(nazwisko) > 1;
+go
+
+--2b) sprawdzanie funkcji 1
+
+SELECT * from pokaz_rodzenstwa();
+
+--3a) tworzenie funkcji 2
+go
+CREATE FUNCTION pokaz_rodzicow (@id_harcerki int)
+    RETURNS TABLE
+    as
+    RETURN
+        SELECT imie_matki, imie_ojca, numer_matki, numer_ojca, mail, imie, nazwisko from rodzice r
+        JOIN rodzice_harcerki rh
+        on r.id_rodzice = rh.id_rodzice
+        join harcerka h
+        on h.id_harcerka = rh.id_harcerka
+        where h.id_harcerka = @id_harcerki;
+go  
+--3b) sprawdzanie funkcji 2
+select * from pokaz_rodzicow(1);
+
+--4a) tworzenie procedury 1
+
+go
+CREATE PROCEDURE stworz_tabele_skladek (@cena_za_dzien DECIMAL(10,2) = 0, @ilosc_dni int = 0)
+AS
+BEGIN
+    CREATE TABLE skladki (
+        id_harcerka INT,
+        nazwisko VARCHAR(15),
+        cena DECIMAL(10,2)
+    );
+
+
+    INSERT INTO skladki (id_harcerka, nazwisko, cena)
+    select h.id_harcerka, h.nazwisko,
+        CASE
+            WHEN h.nazwisko in (SELECT nazwisko from pokaz_rodzenstwa()) THEN POWER(cast(0.8 as float), ((select wielkosc_rodzenstwa from pokaz_rodzenstwa() r where r.nazwisko = h.nazwisko))-1) * @cena_za_dzien * @ilosc_dni
+            else @cena_za_dzien * @ilosc_dni
+        END AS cena
+    FROM harcerka h;
+
+    SELECT * from skladki;
+
+    PRINT 'Utworzono tabele skladek pomyslnie'
+END;
+go
+
+--4b) sprawdzanie procedury 1
+
+EXEC stworz_tabele_skladek @cena_za_dzien = 10, @ilosc_dni=10;
+
+--5a) tworzenie procedury 2
+go
+create PROCEDURE policz_skladki
+as
+BEGIN
+    DECLARE @suma_skladek decimal(10,2);
+    
+    select @suma_skladek = sum(cena)
+    from skladki;
+
+    print 'Laczna kwota skladek: ' + CAST(@suma_skladek as VARCHAR);
+END;
+go
+--5b) sprawdzenie procedury 2
+EXEC stworz_tabele_skladek @cena_za_dzien = 10, @ilosc_dni = 10;
+EXEC policz_skladki;
+--6a) tworzenie wyzwalacza 1
+
+go
+CREATE TRIGGER dodaj_skladki
+on harcerka
+for INSERT
+AS
+BEGIN
+    UPDATE skladki
+    set cena = cena * 0.8 where nazwisko = (select i.nazwisko from inserted i);
+
+    INSERT into skladki (id_harcerka, nazwisko, cena)
+    select
+    i.id_harcerka, i.nazwisko, (select s.cena from skladki s where s.nazwisko = i.nazwisko)
+    from inserted i;
+END;
+go
+--6b) sprawdzenie wyzwalacza 1
+EXEC stworz_tabele_skladek @cena_za_dzien = 10, @ilosc_dni = 10;
+
+INSERT into harcerka(id_harcerka, id_adres, imie, nazwisko, PESEL, data_urodzenia)
+VALUES (40, 3, 'jan', 'Czyzewska', 12345678909, '01-01-2000');
+
+SELECT * from skladki;
+
+--7a) tworzenie wyzwalacza 2
+
+go
+CREATE TRIGGER safe_harcerka
+on harcerka 
+INSTEAD OF delete
+as
+PRINT 'nie mozesz usuwac tabeli harcerka!'
+go
+
+--7b) sprawdzanie wyzwalacza 2
+EXEC stworz_tabele_skladek @cena_za_dzien = 10, @ilosc_dni = 10;
+
+DELETE from harcerka where id_harcerka = 40;
+
+SELECT * from skladki;
+
+--8a) tworzenie wyzwalacza 3
+go
+CREATE TRIGGER usun_skladki_harcerki
+on harcerka
+after DELETE
+as
+BEGIN
+    DELETE from skladki
+    WHERE id_harcerka in (select id_harcerka from deleted)
+END;
+go
+--8b) sprawdzanie wyzwalacza 3
+
+EXEC stworz_tabele_skladek @cena_za_dzien = 10, @ilosc_dni = 10;
+
+disable TRIGGER safe_harcerka on harcerka;
+
+DELETE from harcerka where id_harcerka = 40;
+
+enable TRIGGER safe_harcerka on harcerka;
+
+SELECT * from skladki;
+

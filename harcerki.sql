@@ -1,20 +1,17 @@
-if DB_ID('harcerki') is not null
-    use harcerki;
+use harcerki;
 
-drop TABLE skladki;
+SET DATEFORMAT dmy;
 
-
+--INSERT into harcerka(id_harcerka, )
 EXEC stworz_tabele_skladek @cena_za_dzien = 10, @ilosc_dni = 10;
-go
-select * from pokaz_rodzenstwa()
-ORDER by wielkosc_rodzenstwa desc;
 
+disable TRIGGER safe_harcerka on harcerka;
 
-SELECT * from opiekunki_spoza_bazy;
+DELETE from harcerka where id_harcerka = 40;
 
+enable TRIGGER safe_harcerka on harcerka;
 
-SELECT * from stopnie_harcerek
-ORDER by id_stopien_harcerski;
+SELECT * from skladki;
 
 /*
 SELECT * from adres;
