@@ -5,6 +5,7 @@ DECLARE @ilosc_dni int = 10;
 drop TRIGGER if EXISTS safe_harcerka;
 drop TRIGGER if EXISTS dodaj_skladki;
 drop TRIGGER if EXISTS usun_skladki_harcerki;
+drop TRIGGER if EXISTS update_skladki_after_deleting;
 
 go
 
@@ -44,3 +45,14 @@ END;
 go
 
 CREATE TRIGGER update_skladki_after_deleting
+on harcerka
+after DELETE
+as
+BEGIN
+    DELETE from skladki
+    WHERE id_harcerka = (SELECT d.id_harcerka from deleted d);
+    
+    UPDATE skladki
+    set cena = cena / 0.8 WHERE nazwisko = (SELECT d.nazwisko from deleted d);
+END;
+go
